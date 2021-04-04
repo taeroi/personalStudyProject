@@ -16,6 +16,7 @@
 		645D91E32619B0B1007E3D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645D91E12619B0B1007E3D90 /* LaunchScreen.storyboard */; };
 		645D91EE2619B0B1007E3D90 /* StopWatch_02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91ED2619B0B1007E3D90 /* StopWatch_02Tests.swift */; };
 		645D91F92619B0B1007E3D90 /* StopWatch_02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91F82619B0B1007E3D90 /* StopWatch_02UITests.swift */; };
+		645D92102619B235007E3D90 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D920F2619B235007E3D90 /* StopWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		645D91F42619B0B1007E3D90 /* StopWatch-02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StopWatch-02UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		645D91F82619B0B1007E3D90 /* StopWatch_02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch_02UITests.swift; sourceTree = "<group>"; };
 		645D91FA2619B0B1007E3D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645D920F2619B235007E3D90 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				645D91D32619B0AD007E3D90 /* AppDelegate.swift */,
 				645D91D52619B0AD007E3D90 /* SceneDelegate.swift */,
 				645D91D72619B0AD007E3D90 /* ViewController.swift */,
+				645D920F2619B235007E3D90 /* StopWatch.swift */,
 				645D91D92619B0AD007E3D90 /* Main.storyboard */,
 				645D91DF2619B0B1007E3D90 /* Assets.xcassets */,
 				645D91E12619B0B1007E3D90 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			files = (
 				645D91D82619B0AD007E3D90 /* ViewController.swift in Sources */,
 				645D91D42619B0AD007E3D90 /* AppDelegate.swift in Sources */,
+				645D92102619B235007E3D90 /* StopWatch.swift in Sources */,
 				645D91D62619B0AD007E3D90 /* SceneDelegate.swift in Sources */,
 				645D91DE2619B0AD007E3D90 /* StopWatch_02.xcdatamodeld in Sources */,
 			);
