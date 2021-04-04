@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		645D91662618B348007E3D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91652618B348007E3D90 /* AppDelegate.swift */; };
 		645D91682618B348007E3D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91672618B348007E3D90 /* SceneDelegate.swift */; };
-		645D916A2618B348007E3D90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91692618B348007E3D90 /* ViewController.swift */; };
+		645D916A2618B348007E3D90 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91692618B348007E3D90 /* ProductsTableViewController.swift */; };
 		645D916D2618B348007E3D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645D916B2618B348007E3D90 /* Main.storyboard */; };
 		645D91702618B348007E3D90 /* GoodAsOldPhones_01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 645D916E2618B348007E3D90 /* GoodAsOldPhones_01.xcdatamodeld */; };
 		645D91722618B34A007E3D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645D91712618B34A007E3D90 /* Assets.xcassets */; };
 		645D91752618B34A007E3D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645D91732618B34A007E3D90 /* LaunchScreen.storyboard */; };
 		645D91802618B34A007E3D90 /* GoodAsOldPhones_01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D917F2618B34A007E3D90 /* GoodAsOldPhones_01Tests.swift */; };
 		645D918B2618B34A007E3D90 /* GoodAsOldPhones_01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D918A2618B34A007E3D90 /* GoodAsOldPhones_01UITests.swift */; };
+		645D91A226199D80007E3D90 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91A126199D80007E3D90 /* ProductViewController.swift */; };
+		645D91AA26199D8D007E3D90 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91A926199D8D007E3D90 /* ContactViewController.swift */; };
+		645D91AF26199D99007E3D90 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D91AE26199D99007E3D90 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		645D91622618B348007E3D90 /* GoodAsOldPhones_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodAsOldPhones_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645D91652618B348007E3D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		645D91672618B348007E3D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		645D91692618B348007E3D90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		645D91692618B348007E3D90 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		645D916C2618B348007E3D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		645D916F2618B348007E3D90 /* GoodAsOldPhones_01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodAsOldPhones_01.xcdatamodel; sourceTree = "<group>"; };
 		645D91712618B34A007E3D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		645D91862618B34A007E3D90 /* GoodAsOldPhones_01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodAsOldPhones_01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		645D918A2618B34A007E3D90 /* GoodAsOldPhones_01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodAsOldPhones_01UITests.swift; sourceTree = "<group>"; };
 		645D918C2618B34A007E3D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645D91A126199D80007E3D90 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		645D91A926199D8D007E3D90 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		645D91AE26199D99007E3D90 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,10 @@
 		645D91642618B348007E3D90 /* GoodAsOldPhones_01 */ = {
 			isa = PBXGroup;
 			children = (
+				645D91B326199DA3007E3D90 /* VC */,
+				645D91B426199DAE007E3D90 /* Model */,
 				645D91652618B348007E3D90 /* AppDelegate.swift */,
 				645D91672618B348007E3D90 /* SceneDelegate.swift */,
-				645D91692618B348007E3D90 /* ViewController.swift */,
-				645D916B2618B348007E3D90 /* Main.storyboard */,
 				645D91712618B34A007E3D90 /* Assets.xcassets */,
 				645D91732618B34A007E3D90 /* LaunchScreen.storyboard */,
 				645D91762618B34A007E3D90 /* Info.plist */,
@@ -129,6 +135,25 @@
 				645D918C2618B34A007E3D90 /* Info.plist */,
 			);
 			path = GoodAsOldPhones_01UITests;
+			sourceTree = "<group>";
+		};
+		645D91B326199DA3007E3D90 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				645D916B2618B348007E3D90 /* Main.storyboard */,
+				645D91A126199D80007E3D90 /* ProductViewController.swift */,
+				645D91A926199D8D007E3D90 /* ContactViewController.swift */,
+				645D91692618B348007E3D90 /* ProductsTableViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		645D91B426199DAE007E3D90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				645D91AE26199D99007E3D90 /* Product.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				645D91702618B348007E3D90 /* GoodAsOldPhones_01.xcdatamodeld in Sources */,
-				645D916A2618B348007E3D90 /* ViewController.swift in Sources */,
+				645D916A2618B348007E3D90 /* ProductsTableViewController.swift in Sources */,
 				645D91662618B348007E3D90 /* AppDelegate.swift in Sources */,
+				645D91A226199D80007E3D90 /* ProductViewController.swift in Sources */,
 				645D91682618B348007E3D90 /* SceneDelegate.swift in Sources */,
+				645D91AA26199D8D007E3D90 /* ContactViewController.swift in Sources */,
+				645D91AF26199D99007E3D90 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
