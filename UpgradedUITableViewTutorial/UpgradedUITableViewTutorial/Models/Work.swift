@@ -1,0 +1,15 @@
+//
+//  Works.swift
+//  UpgradedUITableViewTutorial
+//
+//  Created by 태로고침 on 2021/04/06.
+//
+
+import UIKit
+
+struct Work {
+    let title: String
+    let image: UIImage
+    let info: String
+    var isExpanded: Bool
+}
