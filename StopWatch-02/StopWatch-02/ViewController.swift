@@ -12,26 +12,48 @@ class ViewController: UIViewController {
     fileprivate let mainStopWatch: StopWatch = StopWatch()
     fileprivate let lapStopWatch: StopWatch = StopWatch()
     fileprivate var isPlay: Bool = false
-    fileprivate var laps:[String] = []
+    fileprivate var laps: [String] = []
     
     @IBOutlet weak var mainStopWatchLabel: UILabel!
     @IBOutlet weak var lapStopWatchLabel: UILabel!
-    @IBOutlet weak var lapTimerBtn: UIButton!
     @IBOutlet weak var startTimerBtn: UIButton!
+    @IBOutlet weak var lapTimerBtn: UIButton!
     @IBOutlet weak var lapsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Timer"
         
+        let initCircleBtn: (UIButton)-> Void = { button in
+            button.layer.cornerRadius = 0.5 * button.bounds.size.width
+            button.backgroundColor = UIColor.white
+        }
+        
+        initCircleBtn(lapTimerBtn)
+        initCircleBtn(startTimerBtn)
+        
         lapTimerBtn.isEnabled = false
+        
         lapsTableView.delegate = self
         lapsTableView.dataSource = self
         
     }
     
+    //MARK: UI Setting
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    //MARK: Actions
     // Pressed laps Btn
     @IBAction func pressedLapTimerBtn(_ sender: UIButton) {
+
         if !isPlay {
           resetMainTimer()
           resetLapTimer()
@@ -52,23 +74,27 @@ class ViewController: UIViewController {
     // Pressed Start, Stap Btn
     @IBAction func pressedStartBtn(_ sender: UIButton) {
         lapTimerBtn.isEnabled = true
+        
+        changeButton(lapTimerBtn, title: "Lap", titleColor: UIColor.black)
+        
         if !isPlay {
-            unowned let weakSelf = self
-            mainStopWatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
-            
-            RunLoop.current.add(mainStopWatch.timer, forMode: RunLoop.Mode.common)
-            RunLoop.current.add(lapStopWatch.timer, forMode: RunLoop.Mode.common)
-            
-            isPlay = true
-            changeButton(startTimerBtn, title: "Stop", titleColor: UIColor.red)
-        }
-        else {
-            
-            mainStopWatch.timer.invalidate()
-            lapStopWatch.timer.invalidate()
-            isPlay = false
-            changeButton(startTimerBtn, title: "Start", titleColor: UIColor.green)
-            changeButton(lapTimerBtn, title: "Reset", titleColor: UIColor.black)
+          unowned let weakSelf = self
+          
+          mainStopWatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
+          lapStopWatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
+          
+          RunLoop.current.add(mainStopWatch.timer, forMode: RunLoop.Mode.common)
+          RunLoop.current.add(lapStopWatch.timer, forMode: RunLoop.Mode.common)
+          
+          isPlay = true
+          changeButton(startTimerBtn, title: "Stop", titleColor: UIColor.red)
+        } else {
+          
+          mainStopWatch.timer.invalidate()
+          lapStopWatch.timer.invalidate()
+          isPlay = false
+          changeButton(startTimerBtn, title: "Start", titleColor: UIColor.green)
+          changeButton(lapTimerBtn, title: "Reset", titleColor: UIColor.black)
         }
         
     }
